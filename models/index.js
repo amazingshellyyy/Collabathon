@@ -13,5 +13,5 @@ mongoose.connect(DB_URI, {
   .catch(err => console.log(err));
 
 module.exports = {
-  User: require('./users')
+  User: require('./User')
 }
