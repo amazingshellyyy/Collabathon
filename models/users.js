@@ -1,19 +1,23 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
     firstName: {
         type: String,
         required: [true, 'first name is required'],
+        pattern: [/^[A-Za-z]$/, 'No numbers or special characters allowed.'],
+        minlength: 2,
     },
     lastName: {
         type: String,
         required: [true, 'last name is required'],
+        pattern: [/^[A-Za-z]+$/, 'No numbers or special characters allowed'],
+        minlength: 2,
     },
     email: {
         type: String,
         required: [true, 'email is required'],
-
+        pattern: [/^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$/, 'at least one @ and one . required']
+        // regex from regular-expressions.com/email
     },
 })
 
