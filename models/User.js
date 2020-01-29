@@ -4,13 +4,13 @@ const userSchema = new mongoose.Schema({
     firstName: {
         type: String,
         required: [true, 'first name is required'],
-        validate: [/^[A-Za-z]+$/g, 'No numbers or special characters allowed. Please fill in First Name again'],
+        validate: [/^[A-Za-z]+$/, 'No numbers or special characters allowed. Please fill in First Name again'],
         minlength: 2,
     },
     lastName: {
         type: String,
         required: [true, 'last name is required!'],
-        validate: [/^[A-Za-z]+$/g, 'No numbers or special characters allowed. Please fill in Last Name again'],
+        validate: [/^[A-Za-z]+$/, 'No numbers or special characters allowed. Please fill in Last Name again'],
         minlength: 2,
     },
     email: {
