@@ -14,48 +14,72 @@
 </head>
 
 <body>
-  
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Whatever Name</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
-        </li>
-        
-      
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+<div class="upper-box">
+  <div class="container text-center">
+    <div class="row pt-3">
+      <div class="col-sm-2 col-md-2 col-lg-2"></div>
+      <div class="col-sm-8 col-md-8 col-lg-8">
+        <img class="logo" src="/assets/americanIdol.png" alt="">
+      </div>
+      <div class="col-sm-2 col-md-2 col-lg-2"></div>
     </div>
-  </nav>
-  <div class="container mt-5">
-    <form>
-      <div class="form-group">
-        <label for="firstName">First Name</label>
-        <input type="text" class="form-control info" id="firstName" placeholder="Enter first name" />
-        <label for="Lastname">Last Name</label>
-        <input type="text" class="form-control info" id="lastName" placeholder="Enter last name" />
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control info" id="email" aria-describedby="emailHelp"
-          placeholder="Enter email" />
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <div class="row">
+      <div class="col-sm-2 col-md-2 col-lg-2"></div>
+      <h1 class="col-sm-8 col-md-8 col-lg-8">Join the band!</h1>
+      <div class="col-sm-2 col-md-2 col-lg-2"></div>
+    </div>
+    <div class="row mt-5 mb-4 pb-3">
+      <div class="col-sm-2 col-md-2 col-lg-3"></div>
+      <div class="col-sm-8 col-md-8 col-lg-6 sub-header">Are you a big blah blah fan? Have you ever wondered what goes backstage?
+        Do you want to follow along your favorite idols journey? Join our newsletter!</div>
+      <div class="col-sm-2 col-md-2 col-lg-3"></div>
+    </div>
+    <div class="row mt-5 info">
+      <!-- <div class="col-sm-2 col-md-2 col-lg-2"></div> -->
+      <div class="col-sm-3" href="">Cast interviews</div>
+      <div class="col-sm-3" href="">Never before seen footage</div>
+      <div class="col-sm-3" href="">Behind-the-scene clips</div>
+      <div class="col-sm-3" href="">A chance to meet your idols</div>
+      <!-- <div class="col-sm-2 col-md-2 col-lg-2"></div> -->
+    </div>
+</div>
+  </div>
+  <div class="container text-center">
+      <div class="row mt-5 mb-4 pb-3">
+        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+        <div class="col-sm-8 col-md-8 col-lg-8">Join now for weekly access.<br>
+          Don’t worry you can unsubscribe with just one click.<br>
+          Your information is safe with us. Ryan Seacrest Promise</div>
+        <div class="col-sm-2 col-md-2 col-lg-2"></div>
       </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-        <label class="form-check-label" for="exampleCheck1">privacy & terms</label>
+      <div class="row">
+        <div class="col-sm-1"></div>
+        <form class="col-sm-10" id="form">
+          <div class="form-group row">
+            <span class="col-sm-12 col-md-12 col-lg-3 text-left">
+              <label for="firstName">FIRST NAME</label>
+              <input type="text" class="form-control" id="firstName" />
+            </span>
+            <span class="col-sm-12 col-md-12 col-lg-3 text-left">
+              <label for="Lastname">LAST NAME</label>
+              <input type="text" class="form-control" id="lastName" />
+            </span>
+            <span class="col-sm-12 col-md-12 col-lg-6 text-left">
+              <label for="exampleInputEmail1">EMAIL ADDRESS</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" />
+            </span>
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+          <div class="form-check text-left">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+            <label class="form-check-label" for="exampleCheck1">By checking this box, I certify that I am 18 years of age
+              or older, and that I have read the Terms & Agreements.</label>
+          </div>
+          <button type="submit" class="btn btn-primary mt-2" id="send">JOIN THE BAND</button>
+        </form>
+        <div class="col-sm-1"></div>
       </div>
-      <button type="submit" class="btn btn-primary mt-2" id="send" disabled>Submit</button>
-    </form>
+    
   </div>
 
   <!-- Bootstrap stuffs -->
