@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,800,900&display=swap');
+
+body {
+  font-family: 'Muli', sans-serif;
+}
+
+/* Web Browser */
+.logo {
+  max-height: 120px;
+}
+h1 {
+  font-size: 64px;
+  font-weight:800;
+}
+
+.sub-header {
+  font-size: 18px;
+  padding: 0 20px;
+}
+
+.upper-box {
+  height: 60vh;
+  background-color: bisque;
+}
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 48px;
+    font-weight:800;
+  }
+  .info {
+    font-size: 14px;
+  }
+  .upper-box {
+    /* remove upper-box */
+  }
+
+}
+
+/* mobile */
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+    font-weight:800;
+  }
+
+  .sub-header {
+    display: none;
+  }
+
+  .info {
+    display: none;
+  }
+  .upper-box {
+    /* remove upper-box */
+  }
+
+
+}
