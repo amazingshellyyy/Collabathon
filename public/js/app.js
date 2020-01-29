@@ -3,6 +3,14 @@ const BASE = 'http://localhost:4000';
 
 const $form = $('#form');
 
+const checkbox = $('.form-check-input');
+console.log(checkbox);
+
+
+
+
+
+
 const clearAlertMessage = ()=> {
   document.querySelectorAll('.alert').forEach(ele => {
     ele.remove();
@@ -28,12 +36,14 @@ $form.on('submit', () => {
         lastName: lastNameInput,
         email: emailInput,
     }
-    console.log(newUser);
+    // console.log(newUser);
     //check valid before page change
     //   const formInput = [firstNameInput, lastNameInput, emailInput];
     let formIsValid = true;
     let regex = /[^\sA-Za-z]+/;
- 
+    let regex2 =/^((?![@.]).)*$/;
+    let atSign = 0;
+    let dotSign = 0;
     clearAlertMessage();
     if (firstNameInput === '' || firstNameInput.length < 2) {
         formIsValid = false;
@@ -58,21 +68,30 @@ $form.on('submit', () => {
         formIsValid = false;
         $email.addClass('input-error');
         $email.parent().append(`<div class="alert">Please enter your email</div>`)
-    } else if (emailInput.match(regex)) {
-        formIsValid = false;
-        $email.addClass('input-error');
-        $email.parent().append(`<div class="alert">invalid email</div>`)
+    } else if (emailInput !== ''){
+        
+        for (let i = 0; i < emailInput.length; i++) {
+            if (emailInput[i] == '@') {
+               atSign ++;
+            } else if (emailInput[i] == '.') {
+               dotSign ++;
+            }
+        }
+        if (atSign !== 1 || dotSign !== 1) {
+            formIsValid = false;
+                $email.addClass('input-error');
+                $email.parent().append(`<div class="alert">invalid email wuth .</div>`)
+        }
+        
     }
-    
-    
-    
-    
-    
-   
+    // console.log(checkbox.val());
+    // console.log(checkbox);
+    // if (checkbox.attr('checked') !== false) {
+    //     formIsValid = false;
+    //     checkbox.addClass('input-error');
+    //     checkbox.parent().append(`<div class="alert">Please check.</div>`)
+    // }
 
-
-    
-    
 
 const showErr = (err) => {
     if (err.firstName) {
@@ -104,7 +123,7 @@ const showErr = (err) => {
 
     }
 });
-  
+
 
 
 
@@ -140,8 +159,4 @@ $input.on('keydown', function () {
 function doneTyping() {
     $input.css('background-color', 'white');
 }
-
-
-
-
 
