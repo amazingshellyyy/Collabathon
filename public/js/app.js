@@ -41,3 +41,33 @@ $form.on('submit', ()=>{
 
 
 
+
+const $input = $('input');
+console.log($input);
+// $input.on('keyup', ()=> {
+//     $input.addClass('filled');
+// })
+
+//setup before functions
+var typingTimer;                //timer identifier
+var doneTypingInterval = 2000;  //time in ms, 5 second for example
+// var $input = $('#myInput');
+
+//on keyup, start the countdown
+$input.on('keyup', function () {
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(doneTyping, doneTypingInterval);
+});
+
+//on keydown, clear the countdown 
+$input.on('keydown', function () {
+  clearTimeout(typingTimer);
+});
+
+//user is "finished typing," do something
+function doneTyping () {
+    $input.css('background-color','white');
+}
+
+
+
