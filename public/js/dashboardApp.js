@@ -10,10 +10,9 @@ const render = (json) => {
 	json.forEach((elem) => {
         $(".subscriberList").append(`
         <tr>
-            
             <td>${elem.firstName}</td>
             <td>${elem.lastName}</td>
-            <td>${elem.email}</td>
+            <td><a>${elem.email}</td>
         </tr>
       `)
 		//console.log(elem)
