@@ -14,27 +14,28 @@
 </head>
 
 <body>
-<div class="upper-box">
+<div class="full-box">
+<div class="upper-box pb-4">
   <div class="container text-center">
-    <div class="row pt-3">
+    <div class="row pt-5" id="logo"> 
       <div class="col-sm-2 col-md-2 col-lg-2"></div>
       <div class="col-sm-8 col-md-8 col-lg-8">
         <img class="logo" src="/assets/americanIdol.png" alt="">
       </div>
       <div class="col-sm-2 col-md-2 col-lg-2"></div>
     </div>
-    <div class="row">
+    <div class="row pt-5" id="header">
       <div class="col-sm-2 col-md-2 col-lg-2"></div>
       <h1 class="col-sm-8 col-md-8 col-lg-8">Join the band!</h1>
       <div class="col-sm-2 col-md-2 col-lg-2"></div>
     </div>
-    <div class="row mt-5 mb-4 pb-3">
+    <div class="row mt-3 pt-4 mb-4 pb-3" id="sub-header">
       <div class="col-sm-2 col-md-2 col-lg-3"></div>
       <div class="col-sm-8 col-md-8 col-lg-6 sub-header">Are you a big blah blah fan? Have you ever wondered what goes backstage?
         Do you want to follow along your favorite idols journey? Join our newsletter!</div>
       <div class="col-sm-2 col-md-2 col-lg-3"></div>
     </div>
-    <div class="row mt-5 info">
+    <div class="row pt-3 pb-5 mb-2 info" id="info">
       <!-- <div class="col-sm-2 col-md-2 col-lg-2"></div> -->
       <div class="col-sm-3" href="">Cast interviews</div>
       <div class="col-sm-3" href="">Never before seen footage</div>
@@ -44,44 +45,45 @@
     </div>
 </div>
   </div>
+  <div class="lower-box" style="padding: 50px;">
   <div class="container text-center">
-      <div class="row mt-5 mb-4 pb-3">
-        <div class="col-sm-2 col-md-2 col-lg-2"></div>
-        <div class="col-sm-8 col-md-8 col-lg-8">Join now for weekly access.<br>
+      <div class="row mb-4 pb-3" id="email-info">
+        <div class="col-sm-1 col-md-1 col-lg-2"></div>
+        <div class="col-sm-10 col-md-10 col-lg-8 email-info">Join now for weekly access.<br>
           Don’t worry you can unsubscribe with just one click.<br>
           Your information is safe with us. Ryan Seacrest Promise</div>
-        <div class="col-sm-2 col-md-2 col-lg-2"></div>
+        <div class="col-sm-1 col-md-1 col-lg-2"></div>
       </div>
-      <div class="row">
+      <div class="row" id="form-info">
         <div class="col-sm-1"></div>
         <form class="col-sm-10" id="form">
           <div class="form-group row">
-            <span class="col-sm-12 col-md-12 col-lg-3 text-left">
+            <span class="col-sm-12 col-md-12 col-lg-3 text-left pt-4">
               <label for="firstName">FIRST NAME</label>
               <input type="text" class="form-control" id="firstName" />
             </span>
-            <span class="col-sm-12 col-md-12 col-lg-3 text-left">
+            <span class="col-sm-12 col-md-12 col-lg-3 text-left pt-4">
               <label for="Lastname">LAST NAME</label>
               <input type="text" class="form-control" id="lastName" />
             </span>
-            <span class="col-sm-12 col-md-12 col-lg-6 text-left">
+            <span class="col-sm-12 col-md-12 col-lg-6 text-left pt-4">
               <label for="exampleInputEmail1">EMAIL ADDRESS</label>
               <input type="email" class="form-control" id="email" aria-describedby="emailHelp" />
             </span>
             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
           </div>
-          <div class="form-check text-left">
+          <div class="form-check text-left pt-3">
             <input type="checkbox" class="form-check-input" id="exampleCheck1" />
             <label class="form-check-label" for="exampleCheck1">By checking this box, I certify that I am 18 years of age
               or older, and that I have read the Terms & Agreements.</label>
           </div>
-          <button type="submit" class="btn btn-primary mt-2" id="send">JOIN THE BAND</button>
+          <button type="submit" class="btn btn-primary m-3" id="send">JOIN THE BAND</button>
         </form>
         <div class="col-sm-1"></div>
       </div>
-    
+    </div>
   </div>
-
+</div>
   <!-- Bootstrap stuffs -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
