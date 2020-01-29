@@ -114,7 +114,7 @@ const showErr = (err) => {
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
-                // window.location = "/confirm";
+                window.location = "/confirm";
             })
             .catch((err) => {
                 console.log(err);
