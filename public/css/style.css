@@ -53,11 +53,14 @@ input[type="text"]:focus, input[type="email"]:focus{
   background-color :white;
   border: none;
 }
+.input-error {
+  /* background-color: #f8d7da; */
+  border: 2px solid #721c24;
+}
 
-/* .filled {
-  color: black;
-  background-color: white;
-} */
+.alert {
+  color: red;
+}
 
 
 @media screen and (max-width: 768px) {
