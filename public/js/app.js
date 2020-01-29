@@ -38,6 +38,10 @@ $form.on('submit', ()=>{
 
 });
 
+
+
+
+
 const $input = $('input');
 console.log($input);
 // $input.on('keyup', ()=> {
@@ -66,15 +70,4 @@ function doneTyping () {
 }
 
 
-// $(window).resize(()=> {
-//     const $fullbox = $('body > div');
-//     const $upperbox = $('.full-box > div').eq(0);
-//     const $lowerbox = $('.full-box > div').eq(1);
-//     const $windowWidth = window.innerWidth;
-//     console.log($windowWidth);
-//     if ($windowWidth < 768) {
-//     $upperbox.removeClass();
-//     $lowerbox.removeClass();
-//     $fullbox.addClass();
-// }
-// })
+
