@@ -8,7 +8,13 @@ const $form = $('#form');
 const render = (json) => {
     console.log("hello")
 	json.forEach((elem) => {
-        $(".subscriberList").append(`<li>First Name: ${elem.firstName}</li><li>Last Name: ${elem.lastName}</li><li>email: ${elem.email}</li>`)
+        $(".subscriberList").append(`
+        <tr>
+            <td>${elem.firstName}</td>
+            <td>${elem.lastName}</td>
+            <td><a>${elem.email}</td>
+        </tr>
+      `)
 		//console.log(elem)
     })
 }

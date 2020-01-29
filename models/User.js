@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: [true, 'email is required'],
-        validate: [/^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$/, 'at least one @ and one . required']
+        validate: [/^[A-Za-z0-9._%+-]+[@](?:[A-Za-z0-9-]+[.])+[A-Za-z]{2,}$/, 'at least one @ and one . required']
         // regex from regular-expressions.com/email
     },
 })
