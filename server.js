@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-
+const db = require('./models');
 
 app.use(express.static(`${__dirname}/public`));
 
@@ -30,5 +30,20 @@ app.get("/dashboard", (request, response)=>{
       root: __dirname,
   })
 });
+
+//POST user create
+
+app.get("/", (request, response) => {
+  response.json({message: 'hii'});
+})
+
+app.post("/api/v1/users", (request, response) => {
+  const userData = request.body;
+  db.City.create(userData, (err, newUser) => {
+    if (err) return response.status(400).json(err);
+    response.json(newUser);
+  })
+})
+
 
 app.listen(PORT,()=> console.log(`server running at http://localhost:${PORT}`));
