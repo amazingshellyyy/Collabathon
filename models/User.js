@@ -4,26 +4,26 @@ const userSchema = new mongoose.Schema({
     firstName: {
         type: String,
         required: [true, 'first name is required'],
-        pattern: [/^[A-Za-z]$/, 'No numbers or special characters allowed.'],
+        validate: [/^[A-Za-z]+$/g, 'No numbers or special characters allowed. Please fill in First Name again'],
         minlength: 2,
     },
     lastName: {
         type: String,
-        required: [true, 'last name is required'],
-        pattern: [/^[A-Za-z]+$/, 'No numbers or special characters allowed'],
+        required: [true, 'last name is required!'],
+        validate: [/^[A-Za-z]+$/g, 'No numbers or special characters allowed. Please fill in Last Name again'],
         minlength: 2,
     },
     email: {
         type: String,
         required: [true, 'email is required'],
-        pattern: [/^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$/, 'at least one @ and one . required']
+        validate: [/^[A-Za-z0-9._%+-]+@(?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,}$/, 'at least one @ and one . required']
         // regex from regular-expressions.com/email
     },
 })
 
-const user = mongoose.model('user', userSchema);
+const User = mongoose.model('User', userSchema);
 
-module.exports = user;
+module.exports = User;
 
 // ●	I want the user to provide their first and last name.
     // ○	First and last name is required
