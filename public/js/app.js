@@ -52,7 +52,7 @@ $form.on('submit', () => {
     } else if (firstNameInput.match(regex)) {
         formIsValid = false;
         $firstName.addClass('input-error');
-        $firstName.parent().append(`<div class="alert">invalid first name</div>`)
+        $firstName.parent().append(`<div class="alert">Invalid first name</div>`)
     } 
     if (lastNameInput === '' || lastNameInput.length < 2) {
         formIsValid = false;
@@ -80,7 +80,7 @@ $form.on('submit', () => {
         if (atSign !== 1 || dotSign !== 1) {
             formIsValid = false;
                 $email.addClass('input-error');
-                $email.parent().append(`<div class="alert">invalid email wuth .</div>`)
+                $email.parent().append(`<div class="alert">Invalid email</div>`)
         }
         
     }
@@ -114,7 +114,7 @@ const showErr = (err) => {
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
-                // window.location = "/confirm";
+                window.location = "/confirm";
             })
             .catch((err) => {
                 console.log(err);
@@ -141,7 +141,7 @@ console.log($input);
 
 //setup before functions
 var typingTimer;                //timer identifier
-var doneTypingInterval = 2000;  //time in ms, 5 second for example
+var doneTypingInterval = 1000;  //time in ms, 5 second for example
 // var $input = $('#myInput');
 
 //on keyup, start the countdown

@@ -70,6 +70,8 @@ input[type="text"]:focus, input[type="email"]:focus{
 
 .alert {
   color: red;
+  background-color: white;
+  opacity: 80%;
 }
 
 .confirm {
